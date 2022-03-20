@@ -1,0 +1,85 @@
+/**** main **/
+.main-wrapper {
+  grid-area: product;
+}
+.content-title {
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.content-title h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+.product-desc {
+  font-size: 1.2rem;
+}
+
+.main-wrapper {
+  grid-area: products;
+  margin-top: 0;
+}
+
+.bottom-img-btn {
+  justify-items: center;
+}
+
+.cover-img {
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  position: relative;
+}
+.card-description {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+.home-banner {
+  width: 100%;
+  object-fit: fill;
+  aspect-ratio: 5/2;
+}
+
+/**botton card**/
+.bottom-cards {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.card-label {
+  background-color: var(--label-color);
+  color: var(--white);
+}
+
+.bottom-img-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: 0 0 33.333333%;
+  gap: 1rem;
+}
+.bottom-img-btn {
+  margin: 2rem 4rem;
+}
+.category-card img:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+/**** cards **/
+.cards {
+  margin: 0.5rem;
+}
+.card-image img {
+  margin-top: 0.9rem;
+}
+.card-outer-container {
+  max-width: 20rem;
+  max-height: 31rem;
+}
+.card-outer-container:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.card-inner-container {
+  max-width: 20rem;
+}

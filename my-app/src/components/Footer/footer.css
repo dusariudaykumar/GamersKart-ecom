@@ -1,0 +1,31 @@
+.footer {
+  width: 100%;
+  grid-area: footer;
+  background-color: var(--footer-bg);
+  height: 50vh;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.footer h4 {
+  color: var(--white);
+  margin-top: 5rem;
+}
+
+.footer-nav-links li,
+.footer-copyright-text {
+  list-style: none;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.social-media-links li {
+  list-style: none;
+  display: inline-block;
+}
+.social-media-links li a i {
+  font-size: 2rem;
+  color: var(--white);
+  margin: 0.4rem;
+}
