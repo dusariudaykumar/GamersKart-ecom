@@ -1,6 +1,5 @@
 .footer {
   width: 100%;
-  right: 0;
   grid-area: footer;
   background-color: var(--footer-bg);
   height: 50vh;

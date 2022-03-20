@@ -3,11 +3,11 @@ import React from "react";
 const NavBar = () => {
   return (
     <div>
-      <nav class="navigation-bar nav-container flex">
-        <a href="#" class="hamberger-icon hide-content">
-          <i class="material-icons-outlined">menu</i>
+      <nav className="navigation-bar nav-container flex">
+        <a href="#" className="hamberger-icon hide-content">
+          <i className="material-icons-outlined">menu</i>
         </a>
-        <h4 class="logo brand-name">
+        <h4 className="logo brand-name">
           <a href="#"> ReadyMade-UI </a>
         </h4>
         <div className="nav-list flex ">
@@ -19,26 +19,26 @@ const NavBar = () => {
           </a>
         </div>
 
-        <div class="navigation-right-icons ">
-          <div class="search-filter">
-            <span class="icon-search">
-              <i class="fas fa-search"></i>
+        <div className="navigation-right-icons ">
+          <div className="search-filter">
+            <span className="icon-search">
+              <i className="fas fa-search"></i>
             </span>
             <input
-              class="search-space"
+              className="search-space"
               type="search"
               placeholder="What are you looking for ?"
             />
           </div>
           <div className="nav-right-icons-container">
-            <a href="#" class="nav-wishlist-icon">
-              <i class="material-icons-outlined"> favorite_border </i>
+            <a href="#" className="nav-wishlist-icon">
+              <i className="material-icons-outlined"> favorite_border </i>
             </a>
-            <a href="#" class="nav-cart-icon">
-              <i class="material-icons-outlined"> shopping_cart </i>
+            <a href="#" className="nav-cart-icon">
+              <i className="material-icons-outlined"> shopping_cart </i>
             </a>
-            <a href="#" class="nav-person-icon">
-              <i class="material-icons"> person </i>
+            <a href="#" className="nav-person-icon">
+              <i className="material-icons"> person </i>
             </a>
           </div>
         </div>

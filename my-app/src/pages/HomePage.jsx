@@ -12,32 +12,32 @@ const HomePage = () => {
   } = images;
   return (
     <div>
-      <main class="main-wrapper">
-        <div class="main-wrapper">
-          <div class="cover-img flex">
+      <main className="main-wrapper">
+        <div className="main-wrapper">
+          <div className="cover-img flex">
             <a href="">
-              <img class="home-banner" src={bannerIMG} alt="" />
+              <img className="home-banner" src={bannerIMG} alt="" />
             </a>
           </div>
-          <div class="content-title flex-col">
+          <div className="content-title flex-col">
             <h2>Consoles</h2>
-            <p class="product-desc">
+            <p className="product-desc">
               The PS5™ console unleashes new gaming possibilities that you never
               anticipated.
             </p>
           </div>
-          <div class="bottom-cards flex">
+          <div className="bottom-cards flex">
             <a href="">
-              <div class="bottom-left-card">
-                <div class="card-outer-container">
-                  <div class="card-inner-container">
-                    <div class="card-image">
+              <div className="bottom-left-card">
+                <div className="card-outer-container">
+                  <div className="card-inner-container">
+                    <div className="card-image">
                       <img src={consolesIMG} alt="" />
-                      <span class="card-label">New</span>
+                      <span className="card-label">New</span>
                     </div>
-                    <div class="card-info flex-col">
-                      <h4 class="card-title">PlayStation 5 Console</h4>
-                      <p class="card-description">
+                    <div className="card-info flex-col">
+                      <h4 className="card-title">PlayStation 5 Console</h4>
+                      <p className="card-description">
                         Experience lightning fast loading with an ultra-high
                         speed SSD, deeper immersion with support for haptic
                         feedback, adaptive triggers, and 3D Audio, and an
@@ -49,16 +49,18 @@ const HomePage = () => {
               </div>
             </a>
             <a href="/ProductListing/">
-              <div class="bottom-rigth-card">
-                <div class="card-outer-container">
-                  <div class="card-inner-container">
-                    <div class="card-image">
+              <div className="bottom-rigth-card">
+                <div className="card-outer-container">
+                  <div className="card-inner-container">
+                    <div className="card-image">
                       <img src={diskConsoleIMG} alt="" />
-                      <span class="card-label">Trending</span>
+                      <span className="card-label">Trending</span>
                     </div>
-                    <div class="card-info flex-col">
-                      <h4 class="card-title">PlayStation 5 Digital Edition</h4>
-                      <p class="card-description">
+                    <div className="card-info flex-col">
+                      <h4 className="card-title">
+                        PlayStation 5 Digital Edition
+                      </h4>
+                      <p className="card-description">
                         PlayStation®5 Digital Edition The PS5™ Digital Edition
                         unleashes new gaming possibilities that you never
                         anticipated. PS5™ Digital Edition is an all-digital
@@ -70,21 +72,21 @@ const HomePage = () => {
               </div>
             </a>
           </div>
-          <div class="content-title flex-col">
+          <div className="content-title flex-col">
             <h2>Categories</h2>
           </div>
-          <div class="bottom-img-btn">
-            <div class="category-card">
+          <div className="bottom-img-btn">
+            <div className="category-card">
               <a href="">
                 <img src={preOrderBtn} alt="" />
               </a>
             </div>
-            <div class="category-card">
+            <div className="category-card">
               <a href="">
                 <img src={allPS5GamesBtn} alt="" />
               </a>
             </div>
-            <div class="category-card">
+            <div className="category-card">
               <a href="">
                 <img src={accessoriesBtn} alt="" />
               </a>
