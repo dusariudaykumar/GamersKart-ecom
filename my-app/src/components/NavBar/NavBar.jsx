@@ -1,5 +1,6 @@
 import React from "react";
-
+import "./navbar.css";
+// import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <div>
@@ -11,6 +12,7 @@ const NavBar = () => {
           <a href="#"> ReadyMade-UI </a>
         </h4>
         <div className="nav-list flex ">
+          {/* <Link t0="/">HOME</Link> */}
           <a href="#">
             <p>HOME</p>
           </a>

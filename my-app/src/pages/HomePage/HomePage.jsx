@@ -1,6 +1,6 @@
 import React from "react";
-import { images } from "../Asserts/homepage";
-
+import { images } from "../../Asserts/homepage";
+import "./homepage.css";
 const HomePage = () => {
   const {
     homepage: {

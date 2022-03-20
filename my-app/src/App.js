@@ -1,9 +1,8 @@
 import "./App.css";
-import "./styles/navbar.css";
-import "./styles/footer.css";
-import HomePage from "./pages/HomePage";
-import Footer from "./components/Footer";
-import NavBar from "./components/NavBar";
+
+import HomePage from "./pages/HomePage/HomePage";
+import Footer from "./components/Footer/Footer";
+import NavBar from "./components/NavBar/NavBar";
 function App() {
   return (
     <div className="App">
