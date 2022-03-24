@@ -1,0 +1,38 @@
+.aside-bar {
+  grid-area: aside;
+  padding: 0.5rem;
+  gap: 2rem;
+  margin: 1rem;
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid var(--secondary-bg-color);
+}
+.filter-tite {
+  display: inline-flex;
+  justify-content: space-between;
+}
+.price-section strong {
+  font-size: 1.2rem;
+}
+.price-range {
+  justify-content: space-between;
+  margin-top: 0.6rem;
+}
+
+.slider {
+  width: 100%;
+}
+.category-list {
+  gap: 0.6rem;
+}
+.category-item,
+.rating-item,
+.sort-item {
+  margin-top: 0.6rem;
+}
+.category-item label,
+.rating-item label,
+.sort-item label {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+}
