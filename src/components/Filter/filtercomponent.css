@@ -11,6 +11,15 @@
   display: inline-flex;
   justify-content: space-between;
 }
+.clear-btn {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.3rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .price-section strong {
   font-size: 1.2rem;
 }

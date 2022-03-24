@@ -1,6 +1,6 @@
 import React from "react";
 import { useFilter } from "../../contexts/filter-context";
-
+import "../Filter/filtercomponent.css";
 const FilterComponent = ({ items }) => {
   const { state, productDispatch } = useFilter();
   const { sortBy, price, rating, categories } = state;
@@ -12,7 +12,9 @@ const FilterComponent = ({ items }) => {
           <h6>
             <strong>Filters</strong>
           </h6>
-          <button onClick={() => productDispatch({ type: "CLEAR" })}>
+          <button
+            className="clear-btn"
+            onClick={() => productDispatch({ type: "CLEAR" })}>
             Clear
           </button>
         </div>
