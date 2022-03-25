@@ -8,7 +8,7 @@ const FilterProvider = ({ children }) => {
     sortBy: "",
     discount: "",
     rating: 1,
-    price: 1000,
+    price: 50000,
     categories: {
       console: false,
       controller: false,
