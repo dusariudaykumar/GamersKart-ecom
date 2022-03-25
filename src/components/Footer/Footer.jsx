@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./footer.css";
 const Footer = () => {
   return (
@@ -8,16 +9,16 @@ const Footer = () => {
           <h4>Quick Links</h4>
           <ul className="footer-nav-links">
             <li>
-              <a href="#">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="#">Products</a>
+              <Link to="/products">Products</Link>
             </li>
             <li>
-              <a href="#">My Cart</a>
+              <Link to="/">My Cart</Link>
             </li>
             <li>
-              <a href="#">My Wish List</a>
+              <Link to="/">My Wish List</Link>
             </li>
           </ul>
         </div>
@@ -25,26 +26,34 @@ const Footer = () => {
           <h4>Connect with me</h4>
           <ul className="social-media-links">
             <li>
-              <a href="https://twitter.com/UdayKumarDusari" target="_blank">
+              <a
+                href="https://twitter.com/UdayKumarDusari"
+                target="_blank"
+                rel="noreferrer">
                 <i className="fab fa-twitter"></i>
               </a>
             </li>
             <li>
-              <a href="https://github.com/dusariudaykumar" target="_blank">
+              <a
+                href="https://github.com/dusariudaykumar"
+                target="_blank"
+                rel="noreferrer">
                 <i className="fab fa-github"></i>
               </a>
             </li>
             <li>
               <a
                 href="https://www.linkedin.com/in/dusari-uday-kumar-bb2543207/"
-                target="_blank">
+                target="_blank"
+                rel="noreferrer">
                 <i className="fab fa-linkedin"></i>
               </a>
             </li>
             <li>
               <a
                 href="https://www.instagram.com/udaykumar_dusari/"
-                target="_blank">
+                target="_blank"
+                rel="noreferrer">
                 <i className="fab fa-instagram"></i>
               </a>
             </li>
@@ -55,7 +64,4 @@ const Footer = () => {
   );
 };
 
-
 export { Footer };
-
-
