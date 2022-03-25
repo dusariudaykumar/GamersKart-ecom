@@ -22,9 +22,14 @@
 }
 .price-range {
   justify-content: space-between;
+  align-items: center;
   margin-top: 0.6rem;
 }
-
+.price-value {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-right: 0;
+}
 .slider {
   width: 100%;
 }
