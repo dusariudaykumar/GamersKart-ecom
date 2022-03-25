@@ -8,6 +8,7 @@ import { v4 as uuid } from "uuid";
 export const products = [
   {
     _id: uuid(),
+
     title: "PS5™ Controller",
     sellingPrice: 5499,
     originalPrice: 5990,
@@ -95,4 +96,5 @@ export const products = [
     coverImg:
       "https://gamerskart.netlify.app/Asserts/HeadPhones/PS5-headset-2.jpg",
   },
+ 
 ];
