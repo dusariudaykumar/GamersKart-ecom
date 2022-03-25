@@ -18,9 +18,7 @@ const HomePage = () => {
       <main className="main-wrapper">
         <div className="main-wrapper">
           <div className="cover-img flex">
-
             <img className="home-banner" src={bannerIMG} alt="" />
-
           </div>
           <div className="content-title flex-col">
             <h2>Consoles</h2>
@@ -30,9 +28,7 @@ const HomePage = () => {
             </p>
           </div>
           <div className="bottom-cards flex">
-
             <Link to="/products">
-
               <div className="bottom-left-card">
                 <div className="card-outer-container">
                   <div className="card-inner-container">
@@ -52,11 +48,8 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-
             </Link>
             <Link to="/products">
-          
-
               <div className="bottom-rigth-card">
                 <div className="card-outer-container">
                   <div className="card-inner-container">
@@ -78,16 +71,13 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-
             </Link>
-
           </div>
           <div className="content-title flex-col">
             <h2>Categories</h2>
           </div>
           <div className="bottom-img-btn">
             <div className="category-card">
-
               <Link to="/products">
                 <img src={preOrderBtn} alt="" />
               </Link>
@@ -102,15 +92,11 @@ const HomePage = () => {
                 <img src={accessoriesBtn} alt="" />
               </Link>
             </div>
-          
-            </div>
-            
           </div>
         </div>
       </main>
     </div>
   );
 };
-
 
 export { HomePage };
