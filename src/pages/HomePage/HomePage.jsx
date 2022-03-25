@@ -1,6 +1,6 @@
 import React from "react";
 import { images } from "../../Asserts/homepage";
-
+import "./homepage.css";
 import { Link } from "react-router-dom";
 
 import "./homepage.css";

@@ -1,5 +1,4 @@
 import React from "react";
-import FilterComponent from "../Filter/FilterComponent";
 
 const ProductCard = ({ product }) => {
   const {
@@ -23,7 +22,12 @@ const ProductCard = ({ product }) => {
             }`}>
             <div className="card-image">
               <img className="small-img" src={coverImg} alt="ps5-controller" />
-              {latest ? <span className="card-label">New</span> : ""}
+              {latest && <span className="card-label">New</span>}
+              {!inStock && (
+                <span className="card-label  out-of-stock-label">
+                  Out Of Stock
+                </span>
+              )}
             </div>
             <div className="card-info flex-col">
               <span className="card-title">{title}</span>
@@ -55,7 +59,6 @@ const ProductCard = ({ product }) => {
               </div>
             </div>
           </div>
-          {!inStock && <span className="overlay-text">Out of Stock</span>}
         </div>
       </div>
     </div>
