@@ -5,7 +5,6 @@ import "./products.css";
 const Products = () => {
   const {
     state: { data },
-    state,
   } = useFilter();
   const items = data;
 

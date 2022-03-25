@@ -1,26 +1,23 @@
 import React from "react";
 import "./navbar.css";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <div>
       <nav className="navigation-bar nav-container flex">
-        <a
-          href="https://www.google.com/"
-          className="hamberger-icon hide-content">
+        <p className="hamberger-icon hide-content">
           <i className="material-icons-outlined">menu</i>
-        </a>
+        </p>
         <h4 className="logo brand-name">
-          <a href="https://www.google.com/"> GamersKart </a>
+          <a href="/"> GamersKart </a>
         </h4>
         <div className="nav-list flex ">
-          {/* <Link t0="/">HOME</Link> */}
-          <a href="https://www.google.com/">
-            <p>HOME</p>
-          </a>
-          <a href="https://www.google.com/">
-            <p>PRODUCTS</p>
-          </a>
+          <Link to="/" className="home-link">
+            Home
+          </Link>
+          <Link to="/products" className="products-link">
+            Products
+          </Link>
         </div>
 
         <div className="navigation-right-icons ">

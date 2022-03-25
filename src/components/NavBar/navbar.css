@@ -10,7 +10,11 @@
   gap: 0.5rem;
   margin-inline: 1rem;
 }
-
+.home-link,
+.products-link {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
 .search-filter {
   border: 1px solid var(--secondary-bg-color);
   border-radius: 0.8rem;
@@ -30,8 +34,8 @@
   .hide-content {
     display: flex;
   }
-  .nav-list,
-  .nav-right-icons-container {
+  .search-filter,
+  .nav-list {
     display: none;
   }
 }
