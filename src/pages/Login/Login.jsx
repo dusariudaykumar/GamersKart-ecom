@@ -30,7 +30,7 @@ const Login = () => {
           </div>
           <button className="btn btn-solid">Login</button>
         </div>
-        <Link className="sign-up flex" to="/">
+        <Link className="sign-up flex" to="/signup">
           Don't have account ? Sign up!
           <span className="material-icons-outlined"> chevron_right </span>
         </Link>
