@@ -1,6 +1,9 @@
 import React from "react";
 import { images } from "../../Asserts/homepage";
 import "./homepage.css";
+import { Link } from "react-router-dom";
+
+import "./homepage.css";
 const HomePage = () => {
   const {
     homepage: {
@@ -15,9 +18,7 @@ const HomePage = () => {
       <main className="main-wrapper">
         <div className="main-wrapper">
           <div className="cover-img flex">
-            <a href="">
-              <img className="home-banner" src={bannerIMG} alt="" />
-            </a>
+            <img className="home-banner" src={bannerIMG} alt="" />
           </div>
           <div className="content-title flex-col">
             <h2>Consoles</h2>
@@ -27,7 +28,7 @@ const HomePage = () => {
             </p>
           </div>
           <div className="bottom-cards flex">
-            <a href="">
+            <Link to="/products">
               <div className="bottom-left-card">
                 <div className="card-outer-container">
                   <div className="card-inner-container">
@@ -47,8 +48,8 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-            </a>
-            <a href="/ProductListing/">
+            </Link>
+            <Link to="/products">
               <div className="bottom-rigth-card">
                 <div className="card-outer-container">
                   <div className="card-inner-container">
@@ -70,26 +71,26 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
           <div className="content-title flex-col">
             <h2>Categories</h2>
           </div>
           <div className="bottom-img-btn">
             <div className="category-card">
-              <a href="">
+              <Link to="/products">
                 <img src={preOrderBtn} alt="" />
-              </a>
+              </Link>
             </div>
             <div className="category-card">
-              <a href="">
+              <Link to="/products">
                 <img src={allPS5GamesBtn} alt="" />
-              </a>
+              </Link>
             </div>
             <div className="category-card">
-              <a href="">
+              <Link to="/products">
                 <img src={accessoriesBtn} alt="" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -98,4 +99,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export { HomePage };
