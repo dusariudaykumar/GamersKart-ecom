@@ -15,22 +15,21 @@ const FilterComponent = ({ items }) => {
           <button
             className="clear-btn"
             onClick={() => productDispatch({ type: "CLEAR" })}>
-            Clear
+            Clear All
           </button>
         </div>
         <div className="price-section">
-          <h6>Price</h6>
           <div className="price-range flex">
-            <p>1K</p>
-            <p>25K</p>
-            <p>50K</p>
+            <h6>Price range : </h6>
+            <span className="price-value"> 0 to {price} </span>
           </div>
+
           <div className="slide-conatiner">
             <input
               type="range"
-              min="1000"
-              step="500"
-              max="49999"
+              min="4000"
+              step="1000"
+              max="50000"
               value={price}
               className="slider"
               onChange={(e) =>

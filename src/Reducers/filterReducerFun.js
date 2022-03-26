@@ -41,7 +41,7 @@ const filterReducerFun = (state, action) => {
         ...state,
         categories: {
           ...state["categories"],
-          games: !state.categories.game,
+          games: !state.categories.games,
         },
       };
     case "ACCESSORIES":
@@ -63,7 +63,7 @@ const filterReducerFun = (state, action) => {
         sortBy: "",
         discount: "",
         rating: 1,
-        price: 1000,
+        price: 50000,
         categories: {
           console: false,
           controller: false,
@@ -71,6 +71,8 @@ const filterReducerFun = (state, action) => {
           accessories: false,
         },
       };
+    default:
+      return state;
   }
 };
 export { filterReducerFun };
