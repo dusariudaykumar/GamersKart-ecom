@@ -24,7 +24,14 @@
 .sample-input-pwd:focus {
   box-shadow: 0 0 5px var(--logo-color) inset;
 }
-
+.btn-outline {
+  width: 100%;
+  text-transform: capitalize;
+  border: 2px solid var(--btn-primary-color);
+}
+.btn-outline:hover {
+  background-color: var(--btn-primary-color);
+}
 .btn-solid {
   background-color: var(--btn-primary-color);
   width: 100%;

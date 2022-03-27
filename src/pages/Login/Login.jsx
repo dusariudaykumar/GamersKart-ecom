@@ -1,7 +1,11 @@
-import React, { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
+import { useAuth } from "../../contexts/auth-context";
+
 const Login = () => {
   // initial data of the useState
   const initialLoginData = {
@@ -9,15 +13,27 @@ const Login = () => {
     password: "",
   };
   const [loginData, setLoginData] = useState(initialLoginData);
+  const { authState, setAuthState } = useAuth();
+  const navigate = useNavigate();
 
+  const testHandler = (e) => {
+    e.preventDefault();
+    setLoginData({
+      email: "adarshbalika@gmail.com",
+      password: "adarshbalika",
+    });
+  };
   const loginFormChangeHandler = (e) => {
     const { name, value } = e.target;
     setLoginData((prevLoginFormData) => ({
       ...prevLoginFormData,
-      [name]: [value],
+      [name]: value,
     }));
   };
   const { email, password } = loginData; // destructering loginData
+
+  //Login Functionality
+
   const loginHandler = async (e) => {
     e.preventDefault();
     try {
@@ -26,18 +42,18 @@ const Login = () => {
         password: password,
       });
       console.log(authResp);
+      if (authResp.status === 200) {
+        setAuthState({
+          userData: { ...authResp.data.foundUser },
+          isAuth: true,
+          encodedToken: authResp.data.encodedToken,
+        });
+        toast.success("Login Sucessfull");
+      }
       localStorage.setItem("token", authResp.data.encodedToken);
     } catch (error) {
       console.log(error);
     }
-  };
-  const testHandler = (e) => {
-    e.preventDefault();
-    setLoginData((prev) => ({
-      ...prev,
-      email: "adarshbalika@gmail.com",
-      password: "adarshbalika",
-    }));
   };
 
   return (
@@ -75,14 +91,15 @@ const Login = () => {
           <button onClick={loginHandler} className="btn btn-solid">
             Login
           </button>
-          <button onClick={testHandler} className="btn btn-solid">
-            Test
+          <button onClick={testHandler} className="btn btn-outline ">
+            Test Credentials
           </button>
         </div>
         <Link className="sign-up flex" to="/signup">
           Don't have account ? Sign up!
           <span className="material-icons-outlined"> chevron_right </span>
         </Link>
+        <ToastContainer />
       </form>
     </div>
   );
