@@ -1,10 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import { makeServer } from "./server";
-import { BrowserRouter } from "react-router-dom";
-import { FilterProvider } from "./contexts/filter-context";
-import { AuthProvider } from "./contexts/auth-context";
+import { AuthProvider, FilterProvider } from "./contexts/index";
 
 // Call make Server
 makeServer();
