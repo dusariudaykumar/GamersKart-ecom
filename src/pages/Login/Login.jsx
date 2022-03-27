@@ -13,8 +13,7 @@ const Login = () => {
     password: "",
   };
   const [loginData, setLoginData] = useState(initialLoginData);
-  const { authState, setAuthState } = useAuth();
-  const navigate = useNavigate();
+  const { setAuthState } = useAuth();
 
   const testHandler = (e) => {
     e.preventDefault();
@@ -31,7 +30,7 @@ const Login = () => {
     }));
   };
   const { email, password } = loginData; // destructering loginData
-
+  const navigate = useNavigate();
   //Login Functionality
 
   const loginHandler = async (e) => {
@@ -45,17 +44,22 @@ const Login = () => {
       if (authResp.status === 200) {
         setAuthState({
           userData: { ...authResp.data.foundUser },
-          isAuth: true,
+          status: true,
           encodedToken: authResp.data.encodedToken,
         });
-        toast.success("Login Sucessfull");
+        toast.success("Login Sucessfull plaese wait..");
       }
+      setLoginData(initialLoginData); // clearing the input field
       localStorage.setItem("token", authResp.data.encodedToken);
     } catch (error) {
       console.log(error);
     }
+    setTimeout(() => {
+      navigate("/");
+    }, 4000);
   };
 
+  // console.log(authState, loginData);
   return (
     <div className="login-wrapper ">
       <form className="flex-col form-container">
@@ -95,11 +99,11 @@ const Login = () => {
             Test Credentials
           </button>
         </div>
+        <ToastContainer autoClose={3000} />
         <Link className="sign-up flex" to="/signup">
           Don't have account ? Sign up!
           <span className="material-icons-outlined"> chevron_right </span>
         </Link>
-        <ToastContainer />
       </form>
     </div>
   );

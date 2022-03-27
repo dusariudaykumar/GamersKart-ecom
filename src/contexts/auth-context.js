@@ -1,6 +1,6 @@
 import { createContext, useState, useContext } from "react";
 const initialAuth = {
-  isAuth: false,
+  status: false,
   encodedToken: "",
   userData: {},
 };
