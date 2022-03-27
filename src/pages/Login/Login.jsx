@@ -48,15 +48,21 @@ const Login = () => {
           encodedToken: authResp.data.encodedToken,
         });
         toast.success("Login Sucessfull plaese wait..");
+        setTimeout(() => {
+          navigate("/");
+        }, 4000);
+      } else {
+        toast.error("Invalid User");
+        setTimeout(() => {
+          navigate("/login");
+        }, 4000);
       }
       setLoginData(initialLoginData); // clearing the input field
       localStorage.setItem("token", authResp.data.encodedToken);
     } catch (error) {
       console.log(error);
+      toast.warning("Fill the details");
     }
-    setTimeout(() => {
-      navigate("/");
-    }, 4000);
   };
 
   // console.log(authState, loginData);
