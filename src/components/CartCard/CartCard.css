@@ -1,0 +1,101 @@
+.cart-products {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 2rem;
+  gap: 1rem;
+}
+.card-cart {
+  max-width: 40rem;
+  max-height: 20rem;
+  padding: 0.5rem;
+}
+
+.card-cart-inner {
+  max-width: 100%;
+}
+.card-cart-inner {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  grid-template-areas: "image info";
+  /* gap: 1rem; */
+}
+.cart-card-image {
+  grid-area: image;
+}
+.cart-card-image img {
+  object-fit: contain;
+  height: 100%;
+  object-fit: fill;
+}
+
+.cart-card-info {
+  grid-area: info;
+  padding: 0.6rem;
+}
+.quantity-wrapper {
+  padding-top: 1rem;
+}
+.btn-inc,
+.btn-dec {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.quantity-display {
+  width: 3rem;
+  padding: 0.3rem;
+  border: 1px solid black;
+  outline: none;
+}
+.card-cart-btn {
+  display: inline-flex;
+  justify-content: center;
+  gap: 0.4rem;
+  background-color: var(--white);
+  border: 2px solid var(--cart-btn-color);
+  color: var(--black);
+  width: 100%;
+  text-transform: capitalize;
+  transition: 0.2 ease-in;
+}
+.remove-item:hover {
+  background-color: var(--cart-btn-color);
+  color: var(--white);
+  opacity: 1;
+}
+.wishlist-btn {
+  display: inline-flex;
+  justify-content: center;
+  gap: 0.4rem;
+  background-color: var(--cart-btn-color);
+  color: var(--white);
+  width: 100%;
+  padding: 0.4rem;
+  text-transform: capitalize;
+}
+.price-card {
+  order: 1;
+}
+.border-bottom {
+  border-bottom: 1px solid var(--ligth-gray);
+}
+
+.price-title {
+  margin-top: 1rem;
+}
+.price-pill {
+  justify-content: space-between;
+  padding: 0.5rem;
+  align-items: center;
+}
+.price-pill p {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.btn-solid {
+  background-color: var(--btn-primary-color);
+  margin: 1rem 0;
+}
