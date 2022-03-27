@@ -40,12 +40,13 @@ const Login = () => {
         email: email,
         password: password,
       });
+      const { encodedToken, foundUser } = authResp.data;
       console.log(authResp);
       if (authResp.status === 200) {
         setAuthState({
-          userData: { ...authResp.data.foundUser },
+          userData: foundUser,
           status: true,
-          encodedToken: authResp.data.encodedToken,
+          encodedToken: encodedToken,
         });
         toast.success("Login Sucessfull plaese wait..");
         setTimeout(() => {
@@ -58,7 +59,8 @@ const Login = () => {
         }, 4000);
       }
       setLoginData(initialLoginData); // clearing the input field
-      localStorage.setItem("token", authResp.data.encodedToken);
+      localStorage.setItem("token", encodedToken);
+      localStorage.setItem("foundUser", JSON.stringify(foundUser));
     } catch (error) {
       console.log(error);
       toast.warning("Fill the details");
