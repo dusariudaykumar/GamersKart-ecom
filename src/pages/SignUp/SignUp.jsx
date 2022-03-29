@@ -1,10 +1,55 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../contexts/auth-context";
 import "./SignUp.css";
 const SignUp = () => {
+  const { authState, setAuthState } = useAuth();
+  const initailSingUpData = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  };
+  const [signUpData, setSignUpData] = useState(initailSingUpData);
+  const formDataChangeHandler = (e) => {
+    const { name, value } = e.target;
+    setSignUpData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+  const { firstName, lastName, email, password, confirmPassword } = signUpData;
+  const formDataClickHandler = async (e) => {
+    e.preventDefault();
+    console.log({ ...signUpData });
+    try {
+      const authSignUpResponse = await axios.post("/api/auth/signup", {
+        email,
+        password,
+        firstName,
+        lastName,
+      });
+      const { encodedToken, createdUser } = authSignUpResponse.data;
+      setAuthState({
+        status: true,
+        encodedToken: encodedToken,
+        userData: createdUser,
+      });
+
+      localStorage.setItem("token", encodedToken);
+      localStorage.setItem("createdUser", JSON.stringify(createdUser));
+      console.log(authSignUpResponse);
+      setSignUpData(initailSingUpData);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  console.log(authState);
   return (
     <div className="sign-wrapper ">
-      <form className="flex-col form-container">
+      <form className="flex-col form-container" onSubmit={formDataClickHandler}>
         <h5 className="signup-heading">SignUp</h5>
         <div className="input-container flex-col">
           <div className="flex-col">
@@ -15,19 +60,24 @@ const SignUp = () => {
               className="input-name sample-input-email"
               type="text"
               id="first-name-input"
+              onChange={formDataChangeHandler}
+              name="firstName"
+              value={firstName}
               placeholder="Enter your First Name"
               required
             />
           </div>
           <div className="flex-col">
             <label className="signup-labels " htmlFor="last-name-input">
-              {" "}
               Last Name
             </label>
             <input
               className=" input-last-name sample-input-email"
               type="text"
               id="last-name-input"
+              onChange={formDataChangeHandler}
+              name="lastName"
+              value={lastName}
               placeholder="Enter your Last Name"
               required
             />
@@ -40,6 +90,9 @@ const SignUp = () => {
               className=" input-last-name sample-input-email"
               type="text"
               id="email-input"
+              onChange={formDataChangeHandler}
+              name="email"
+              value={email}
               placeholder="Enter your Last Name"
               required
             />
@@ -51,6 +104,9 @@ const SignUp = () => {
             <input
               className="sample-input-pwd"
               type="password"
+              onChange={formDataChangeHandler}
+              name="password"
+              value={password}
               placeholder="Password"
               id="pwd-input"
               required
@@ -64,6 +120,9 @@ const SignUp = () => {
               className="sample-input-pwd"
               type="Confirm Password"
               id="confirm-pwd-input"
+              onChange={formDataChangeHandler}
+              name="confirmPassword"
+              value={confirmPassword}
               placeholder="Confirm Password"
               required
             />
