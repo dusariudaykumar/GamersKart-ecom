@@ -1,0 +1,36 @@
+.price-card {
+  order: 1;
+}
+.border-bottom {
+  border-bottom: 1px solid var(--ligth-gray);
+}
+
+.price-title {
+  margin-top: 1rem;
+}
+.price-pill {
+  justify-content: space-between;
+  padding: 0.5rem;
+  align-items: center;
+}
+.price-pill p {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.btn-solid {
+  background-color: var(--btn-primary-color);
+  margin: 1rem 0;
+}
+
+.price-outer-container {
+  width: 34rem;
+  max-height: 25rem;
+  border: 1px solid var(--light-grey);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  padding: 0.4rem 1rem;
+  margin-bottom: 2rem;
+}
+.price-inner-container {
+  width: 100%;
+  margin: 0.4rem;
+}
