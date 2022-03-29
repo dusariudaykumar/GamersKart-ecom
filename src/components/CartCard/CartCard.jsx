@@ -2,34 +2,34 @@ import React from "react";
 import "./CartCard.css";
 const CartCard = () => {
   return (
-    <div class="cart-outer-container">
-      <div class="cart-inner-container ">
-        <div class="cart-image-container">
+    <div className="cart-outer-container">
+      <div className="cart-inner-container ">
+        <div className="cart-image-container">
           <img
-            class="cart-img"
+            className="cart-img"
             src="https://gamerskart.netlify.app/Asserts/controllers-img/PS5_DUALSENSE.jpg"
             alt=""
           />
         </div>
-        <div class="cart-info">
-          <p class="cart-card-title">PS5™ Controller</p>
-          <div class="price-details">
-            <span class="current-price">₹5,499</span>
-            <span class="previous-price">₹5,990 </span>
-            <span class="discount-percentage">8% off </span>
+        <div className="cart-info">
+          <p className="cart-card-title">PS5™ Controller</p>
+          <div className="price-details">
+            <span className="current-price">₹5,499</span>
+            <span className="previous-price">₹5,990 </span>
+            <span className="discount-percentage">8% off </span>
           </div>
-          <div class="cart-qty-container">
-            <button class="cart-qty-inc">+</button>
-            <div class="qty-display">1</div>
-            <button class="cart-qty-dec">-</button>
+          <div className="cart-qty-container">
+            <button className="cart-qty-inc">+</button>
+            <div className="qty-display">1</div>
+            <button className="cart-qty-dec">-</button>
           </div>
           <div>
-            <button class="cart-remove-item cart-color">
-              <i class="material-icons-outlined"> shopping_cart </i>
+            <button className="cart-remove-item cart-color">
+              <i className="material-icons-outlined"> shopping_cart </i>
               Remove From cart
             </button>
-            <button class="cart-wishlist-btn wishlist-color">
-              <i class="material-icons-outlined"> favorite_border </i>
+            <button className="cart-wishlist-btn wishlist-color">
+              <i className="material-icons-outlined"> favorite_border </i>
               Move To Wishlist
             </button>
           </div>
