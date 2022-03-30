@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { useCart } from "../../contexts/cart-context";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, addToCartHandler }) => {
   const {
-    id,
+    _id,
     coverImg,
     originalPrice,
     sellingPrice,
@@ -12,8 +14,9 @@ const ProductCard = ({ product }) => {
     latest,
     inStock,
   } = product; // destructering
+  const { cartItems } = useCart();
   return (
-    <div key={id}>
+    <div key={_id}>
       <div className="cards ">
         <div className="card-outer-container">
           <div
@@ -50,9 +53,19 @@ const ProductCard = ({ product }) => {
                 </button>
               </div>
               <div className="card-btns">
-                <button className="card-cart-btn">
-                  <i className="material-icons"> shopping_cart </i> Add To Cart
-                </button>
+                {cartItems.find((e) => e._id === _id) ? (
+                  <Link to="/cart">
+                    <button className="card-cart-btn">
+                      <i className="material-icons"> shopping_cart </i> View
+                      Cart
+                    </button>
+                  </Link>
+                ) : (
+                  <button className="card-cart-btn" onClick={addToCartHandler}>
+                    <i className="material-icons"> shopping_cart </i> Add To
+                    Cart
+                  </button>
+                )}
                 <button className="card-buy-btn">
                   <i className="material-icons">flash_on </i>Buy Now
                 </button>
