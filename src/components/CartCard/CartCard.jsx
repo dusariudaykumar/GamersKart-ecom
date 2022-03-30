@@ -1,22 +1,23 @@
 import React from "react";
+import { useCart } from "../../contexts/cart-context";
+
 import "./CartCard.css";
-const CartCard = () => {
+
+const CartCard = ({ cartItem }) => {
+  const { _id, coverImg, discountPercent, title, sellingPrice, originalPrice } =
+    cartItem;
   return (
     <div className="cart-outer-container">
       <div className="cart-inner-container ">
         <div className="cart-image-container">
-          <img
-            className="cart-img"
-            src="https://gamerskart.netlify.app/Asserts/controllers-img/PS5_DUALSENSE.jpg"
-            alt=""
-          />
+          <img className="cart-img" src={coverImg} alt="products" />
         </div>
         <div className="cart-info">
-          <p className="cart-card-title">PS5™ Controller</p>
+          <p className="cart-card-title">{title}</p>
           <div className="price-details">
-            <span className="current-price">₹5,499</span>
-            <span className="previous-price">₹5,990 </span>
-            <span className="discount-percentage">8% off </span>
+            <span className="current-price">₹{sellingPrice}</span>
+            <span className="previous-price">₹{originalPrice} </span>
+            <span className="discount-percentage">{discountPercent}% off </span>
           </div>
           <div className="cart-qty-container">
             <button className="cart-qty-inc">+</button>
