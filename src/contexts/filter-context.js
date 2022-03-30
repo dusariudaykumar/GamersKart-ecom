@@ -22,7 +22,6 @@ const FilterProvider = ({ children }) => {
     (async () => {
       try {
         const response = await axios.get("/api/products");
-        console.log(response.data);
         productDispatch({ type: "DATA", payload: response.data.products });
       } catch (error) {
         console.log("error here in filter-context", error);
