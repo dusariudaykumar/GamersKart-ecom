@@ -47,7 +47,7 @@ const FilterComponent = ({ items }) => {
                 id="console"
                 value="console"
                 checked={console}
-                onClick={(e) => productDispatch({ type: "CONSOLES" })}
+                onChange={(e) => productDispatch({ type: "CONSOLES" })}
               />
               <label htmlFor="console">Consoles</label>
             </div>
@@ -57,7 +57,7 @@ const FilterComponent = ({ items }) => {
                 id="controllers"
                 value="controller"
                 checked={controller}
-                onClick={(e) => productDispatch({ type: "CONTROLLERS" })}
+                onChange={(e) => productDispatch({ type: "CONTROLLERS" })}
               />
               <label htmlFor="controllers">Controllers</label>
             </div>
@@ -67,7 +67,7 @@ const FilterComponent = ({ items }) => {
                 id="games"
                 value="games"
                 checked={games}
-                onClick={(e) => productDispatch({ type: "GAMES" })}
+                onChange={(e) => productDispatch({ type: "GAMES" })}
               />
               <label htmlFor="games">Games</label>
             </div>
@@ -77,7 +77,7 @@ const FilterComponent = ({ items }) => {
                 id="accessories"
                 value="accessories"
                 checked={accessories}
-                onClick={(e) => productDispatch({ type: "ACCESSORIES" })}
+                onChange={(e) => productDispatch({ type: "ACCESSORIES" })}
               />
               <label htmlFor="accessories">Accessories</label>
             </div>
