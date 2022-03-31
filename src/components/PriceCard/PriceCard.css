@@ -24,13 +24,13 @@
 
 .price-outer-container {
   width: 34rem;
-  max-height: 25rem;
+  max-height: 22rem;
   border: 1px solid var(--light-grey);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
   padding: 0.4rem 1rem;
-  margin-bottom: 2rem;
+  margin: 0.3rem 2.7rem;
 }
 .price-inner-container {
   width: 100%;
-  margin: 0.4rem;
+  margin: 0rem;
 }
