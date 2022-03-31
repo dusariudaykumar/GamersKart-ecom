@@ -1,0 +1,6 @@
+.cart-products {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 2rem;
+  gap: 1rem;
+}
