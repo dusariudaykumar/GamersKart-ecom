@@ -1,11 +1,10 @@
 import React from "react";
-import { useCart } from "../../contexts/cart-context";
-
+import { toast } from "react-toastify";
 import "./CartCard.css";
-
-const CartCard = ({ cartItem }) => {
+const CartCard = ({ cartItem, removeHandler, quantityHandler }) => {
   const { _id, coverImg, discountPercent, title, sellingPrice, originalPrice } =
     cartItem;
+
   return (
     <div className="cart-outer-container">
       <div className="cart-inner-container ">
@@ -20,12 +19,36 @@ const CartCard = ({ cartItem }) => {
             <span className="discount-percentage">{discountPercent}% off </span>
           </div>
           <div className="cart-qty-container">
-            <button className="cart-qty-inc">+</button>
-            <div className="qty-display">1</div>
-            <button className="cart-qty-dec">-</button>
+            {cartItem.qty <= 1 ? (
+              <button
+                className="cart-qty-dec dec-icon-container"
+                onClick={() => removeHandler(_id)}>
+                <span className="material-icons-outlined del-icon">delete</span>
+              </button>
+            ) : (
+              <button
+                className="cart-qty-dec"
+                onClick={() => quantityHandler(_id, "decrement")}>
+                <span className="material-icons-outlined">remove</span>
+              </button>
+            )}
+            <div className="qty-display">{cartItem.qty}</div>
+            {cartItem.qty >= 4 ? (
+              <button className="cart-qty-inc" disabled>
+                <span className="material-icons-outlined">add</span>
+              </button>
+            ) : (
+              <button
+                className="cart-qty-inc"
+                onClick={() => quantityHandler(_id, "increment")}>
+                <span className="material-icons-outlined">add</span>
+              </button>
+            )}
           </div>
           <div>
-            <button className="cart-remove-item cart-color">
+            <button
+              className="cart-remove-item cart-color"
+              onClick={() => removeHandler(_id)}>
               <i className="material-icons-outlined"> shopping_cart </i>
               Remove From cart
             </button>
