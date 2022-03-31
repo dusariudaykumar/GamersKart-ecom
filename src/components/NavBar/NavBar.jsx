@@ -1,9 +1,9 @@
 import React from "react";
 import "./navbar.css";
-
 import { Link } from "react-router-dom";
-
+import { useCart } from "../../contexts/cart-context";
 const NavBar = () => {
+  const { cartItems } = useCart();
   return (
     <div>
       <nav className="navigation-bar nav-container flex">
@@ -34,15 +34,29 @@ const NavBar = () => {
             />
           </div>
           <div className="nav-right-icons-container">
-            <a href="https://www.google.com/" className="nav-wishlist-icon">
-              <i className="material-icons-outlined"> favorite_border </i>
-            </a>
-            <a href="https://www.google.com/" className="nav-cart-icon">
-              <i className="material-icons-outlined"> shopping_cart </i>
-            </a>
-            <a href="https://www.google.com/" className="nav-person-icon">
+            <div className="badge-container">
+              <span className="nav-icons">
+                <Link to="/" className="nav-wishlist-icon">
+                  <i className="material-icons-outlined"> favorite_border </i>
+                </Link>
+              </span>
+              <span class="wishlist-badge icon-badge-count bell-icon">0</span>
+            </div>
+
+            <div className="badge-container">
+              <span className="nav-icons">
+                <Link to="/cart" className="nav-cart-icon">
+                  <i className="material-icons-outlined"> shopping_cart </i>
+                </Link>
+              </span>
+              <span class="cart-badge icon-badge-count bell-icon">
+                {cartItems.length}
+              </span>
+            </div>
+
+            <Link to="/login" className="nav-person-icon">
               <i className="material-icons"> person </i>
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
