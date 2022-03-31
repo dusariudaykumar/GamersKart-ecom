@@ -18,7 +18,7 @@ const Cart = () => {
       setCartItems(cart);
       toast.success("Item removed from cart");
     } catch (error) {
-      toast.error("Please try again !!");
+      toast.error("Please try again After some time !!");
     }
   };
   const quantityHandler = async (productId, type) => {
@@ -37,7 +37,6 @@ const Cart = () => {
         }
       );
       setCartItems(response.data.cart);
-      console.log(response);
     } catch (error) {
       console.log(error);
     }

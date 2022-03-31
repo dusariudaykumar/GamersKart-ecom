@@ -40,7 +40,9 @@ const NavBar = () => {
                   <i className="material-icons-outlined"> favorite_border </i>
                 </Link>
               </span>
-              <span class="wishlist-badge icon-badge-count bell-icon">0</span>
+              <span className="wishlist-badge icon-badge-count bell-icon">
+                0
+              </span>
             </div>
 
             <div className="badge-container">
@@ -49,7 +51,7 @@ const NavBar = () => {
                   <i className="material-icons-outlined"> shopping_cart </i>
                 </Link>
               </span>
-              <span class="cart-badge icon-badge-count bell-icon">
+              <span className="cart-badge icon-badge-count bell-icon">
                 {cartItems.length}
               </span>
             </div>
