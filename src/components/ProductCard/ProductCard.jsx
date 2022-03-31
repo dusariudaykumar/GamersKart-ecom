@@ -56,8 +56,8 @@ const ProductCard = ({ product, addToCartHandler }) => {
                 {cartItems.find((e) => e._id === _id) ? (
                   <Link to="/cart">
                     <button className="card-cart-btn">
-                      <i className="material-icons"> shopping_cart </i> View
-                      Cart
+                      <i className="material-icons"> shopping_cart_checkout </i>
+                      View Cart
                     </button>
                   </Link>
                 ) : (
