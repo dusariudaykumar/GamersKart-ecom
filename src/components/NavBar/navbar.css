@@ -3,9 +3,6 @@
   border: 0;
   height: 10vh;
   background-color: var(--white);
-  position: fixed;
-  top: 0;
-  z-index: 99;
 }
 .hide-content {
   display: none;
