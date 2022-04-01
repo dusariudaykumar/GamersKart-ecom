@@ -17,7 +17,7 @@ const PriceCard = () => {
     }
   );
   const totalAmount = totalPrice.price - totalPrice.discount + 500;
-  console.log(totalAmount);
+
   return (
     <div className="price-outer-container">
       <div className="price-inner-container">
