@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "../../contexts/cart-context";
+import { useWishlist } from "../../contexts/wishlist-context";
 
-const ProductCard = ({ product, addToCartHandler }) => {
+const ProductCard = ({ product, addToCartHandler, addToWishlistHandler }) => {
   const {
     _id,
     coverImg,
@@ -15,6 +16,7 @@ const ProductCard = ({ product, addToCartHandler }) => {
     inStock,
   } = product; // destructering
   const { cartItems } = useCart();
+  const { wishlistItems, removeFromWishlistHandler } = useWishlist();
   return (
     <div key={_id}>
       <div className="cards ">
@@ -48,9 +50,21 @@ const ProductCard = ({ product, addToCartHandler }) => {
                 <span className="discount-percentage">
                   {discountPercent}% off
                 </span>
-                <button className="btn-wishlist">
-                  <i className="fas fa-heart"></i>
-                </button>
+                {wishlistItems.find((e) => e._id === _id) ? (
+                  <button
+                    className="btn-wishlist "
+                    onClick={() => removeFromWishlistHandler(_id)}>
+                    <span className="material-icons-outlined favorite ">
+                      favorite
+                    </span>
+                  </button>
+                ) : (
+                  <button
+                    className="btn-wishlist"
+                    onClick={addToWishlistHandler}>
+                    <i className="fas fa-heart "></i>
+                  </button>
+                )}
               </div>
               <div className="card-btns">
                 {cartItems.find((e) => e._id === _id) ? (
