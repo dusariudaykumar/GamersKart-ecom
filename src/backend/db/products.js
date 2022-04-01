@@ -23,7 +23,7 @@ export const products = [
       bestSeller: true,
     },
     coverImg:
-      "https://gamerskart.netlify.app/Asserts/controllers-img/PS5_DUALSENSE.jpg",
+      "https://cdn.shopify.com/s/files/1/2141/8475/products/1_68b741f0-5e5e-43e6-b20b-ad653bdb69ce_240x240.jpg?v=1605004796",
   },
   {
     _id: uuid(),
@@ -41,7 +41,7 @@ export const products = [
       bestSeller: true,
     },
     coverImg:
-      "https://gamerskart.netlify.app/Asserts/controllers-img/controller-charger.jpg",
+      "https://cdn.shopify.com/s/files/1/2141/8475/products/3_a4969de1-1652-4002-b0c6-1ca9dda216d7_900x.jpg?v=1605004535",
   },
   {
     _id: uuid(),
@@ -59,7 +59,7 @@ export const products = [
       bestSeller: true,
     },
     coverImg:
-      "https://gamerskart.netlify.app/Asserts/Consoles/console-mini.png",
+      "https://cdn.shopify.com/s/files/1/2141/8475/products/PS5_01_DUALSENSE_GALAXY_CC_MB_sRGB_211124_240x240.jpg?v=1642127742",
   },
   {
     _id: uuid(),
@@ -76,7 +76,8 @@ export const products = [
       newArrival: false,
       bestSeller: true,
     },
-    coverImg: "https://gamerskart.netlify.app/Asserts/Games-img/fifa1.webp",
+    coverImg:
+      "https://image.api.playstation.com/vulcan/img/rnd/202111/0822/zDXM9K2cQiq0vKTDwF0TkAor.png",
   },
   {
     _id: uuid(),
@@ -94,7 +95,6 @@ export const products = [
       bestSeller: true,
     },
     coverImg:
-      "https://gamerskart.netlify.app/Asserts/HeadPhones/PS5-headset-2.jpg",
+      "https://cdn.shopify.com/s/files/1/2141/8475/products/301498059-2_900x.jpg?v=1640155965",
   },
- 
 ];
