@@ -1,6 +1,7 @@
 .cart-products {
   flex-wrap: wrap;
   justify-content: space-evenly;
+  align-items: center;
   margin: 0 2rem;
   gap: 1rem;
 }

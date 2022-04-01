@@ -4,7 +4,8 @@ const initialAuth = {
   encodedToken: "",
   userData: {},
 };
-const AuthContext = createContext(null);
+
+const AuthContext = createContext(initialAuth);
 const useAuth = () => useContext(AuthContext);
 const AuthProvider = ({ children }) => {
   const [authState, setAuthState] = useState(initialAuth);

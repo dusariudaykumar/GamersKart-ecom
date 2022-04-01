@@ -15,10 +15,10 @@ const Footer = () => {
               <Link to="/products">Products</Link>
             </li>
             <li>
-              <Link to="/">My Cart</Link>
+              <Link to="/cart">My Cart</Link>
             </li>
             <li>
-              <Link to="/">My Wish List</Link>
+              <Link to="/wishlist">My Wish List</Link>
             </li>
           </ul>
         </div>

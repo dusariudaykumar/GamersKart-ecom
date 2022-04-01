@@ -1,10 +1,14 @@
 .footer {
+  position: sticky;
+  bottom: 0;
   width: 100%;
   grid-area: footer;
   background-color: var(--footer-bg);
-  height: 50vh;
+  max-height: 50vh;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  padding: 1rem 0;
+  margin-top: 1rem;
 }
 .footer h4 {
   color: var(--white);

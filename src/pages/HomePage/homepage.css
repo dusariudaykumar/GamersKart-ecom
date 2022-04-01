@@ -8,8 +8,9 @@
   justify-content: center;
 }
 .content-title h2 {
-  font-size: 2.6rem;
+  font-size: 2.3rem;
   font-weight: 700;
+  font-family: "Ubuntu", sans-serif;
 }
 .product-desc {
   font-size: 1.2rem;

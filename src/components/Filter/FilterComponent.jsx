@@ -21,7 +21,7 @@ const FilterComponent = ({ items }) => {
         <div className="price-section">
           <div className="price-range flex">
             <h6>Price range : </h6>
-            <span className="price-value"> 0 to {price} </span>
+            <span className="price-value"> ₹3K to {price} </span>
           </div>
 
           <div className="slide-conatiner">
@@ -39,7 +39,7 @@ const FilterComponent = ({ items }) => {
           </div>
         </div>
         <div>
-          <h6>Category</h6>
+          <h6 className="filter-heading">Category</h6>
           <div className="category-list flex-col">
             <div className="category-item">
               <input
@@ -47,7 +47,7 @@ const FilterComponent = ({ items }) => {
                 id="console"
                 value="console"
                 checked={console}
-                onClick={(e) => productDispatch({ type: "CONSOLES" })}
+                onChange={(e) => productDispatch({ type: "CONSOLES" })}
               />
               <label htmlFor="console">Consoles</label>
             </div>
@@ -57,7 +57,7 @@ const FilterComponent = ({ items }) => {
                 id="controllers"
                 value="controller"
                 checked={controller}
-                onClick={(e) => productDispatch({ type: "CONTROLLERS" })}
+                onChange={(e) => productDispatch({ type: "CONTROLLERS" })}
               />
               <label htmlFor="controllers">Controllers</label>
             </div>
@@ -67,7 +67,7 @@ const FilterComponent = ({ items }) => {
                 id="games"
                 value="games"
                 checked={games}
-                onClick={(e) => productDispatch({ type: "GAMES" })}
+                onChange={(e) => productDispatch({ type: "GAMES" })}
               />
               <label htmlFor="games">Games</label>
             </div>
@@ -77,7 +77,7 @@ const FilterComponent = ({ items }) => {
                 id="accessories"
                 value="accessories"
                 checked={accessories}
-                onClick={(e) => productDispatch({ type: "ACCESSORIES" })}
+                onChange={(e) => productDispatch({ type: "ACCESSORIES" })}
               />
               <label htmlFor="accessories">Accessories</label>
             </div>
@@ -85,7 +85,7 @@ const FilterComponent = ({ items }) => {
         </div>
 
         <div>
-          <h6>Rating</h6>
+          <h6 className="filter-heading">Rating</h6>
           <div className="flex-col rating-list">
             <div className="rating-item">
               <input
@@ -143,7 +143,7 @@ const FilterComponent = ({ items }) => {
         </div>
 
         <div>
-          <h6>Sort by</h6>
+          <h6 className="filter-heading">Sort by</h6>
           <div className="flex-col sort-list">
             <div className="sort-item">
               <input

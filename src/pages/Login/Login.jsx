@@ -58,16 +58,15 @@ const Login = () => {
           navigate("/login");
         }, 4000);
       }
-      setLoginData(initialLoginData); // clearing the input field
       localStorage.setItem("token", encodedToken);
       localStorage.setItem("foundUser", JSON.stringify(foundUser));
+      setLoginData(initialLoginData); // clearing the input field
     } catch (error) {
       console.log(error);
       toast.warning("Fill the details");
     }
   };
 
-  // console.log(authState, loginData);
   return (
     <div className="login-wrapper ">
       <form className="flex-col form-container">

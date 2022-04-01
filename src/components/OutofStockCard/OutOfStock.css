@@ -1,0 +1,9 @@
+.out-of-stock {
+  cursor: default !important;
+}
+.out-of-stock:hover {
+  opacity: 1;
+}
+.out-of-stock-wishlist {
+  color: var(--ligth-gray) !important;
+}
