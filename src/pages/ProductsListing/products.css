@@ -1,6 +1,6 @@
 .product-layout {
   display: grid;
-  grid-template-columns: 200px 3fr;
+  grid-template-columns: 230px 3fr;
   grid-template-areas: "aside  product";
   gap: 1rem;
 }
