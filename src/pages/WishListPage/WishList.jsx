@@ -44,7 +44,7 @@ const WishList = () => {
 
   return (
     <div className="flex wishlist-wrapper">
-      {wishlistItems.length > 1 ? (
+      {wishlistItems.length > 0 ? (
         wishlistItems.map((product) => {
           return (
             <WishListCard

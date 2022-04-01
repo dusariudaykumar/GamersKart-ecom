@@ -1,5 +1,4 @@
 import React from "react";
-import { useWishlist } from "../../contexts/wishlist-context";
 
 import "./CartCard.css";
 const CartCard = ({

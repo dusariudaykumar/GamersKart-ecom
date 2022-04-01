@@ -2,7 +2,6 @@ import React from "react";
 import "./OutOfStock.css";
 const OutOfStockCard = ({ product }) => {
   const {
-    _id,
     coverImg,
     originalPrice,
     sellingPrice,
