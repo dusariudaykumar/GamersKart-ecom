@@ -1,0 +1,9 @@
+.wishlist-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.favorite {
+  color: var(--favourite-product-color);
+  cursor: pointer;
+}
