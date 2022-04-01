@@ -9,32 +9,15 @@ const NavBar = () => {
   return (
     <div>
       <nav className="navigation-bar nav-container flex">
-        <p className="hamberger-icon hide-content">
-          <i className="material-icons-outlined">menu</i>
-        </p>
-        <h4 className="logo brand-name">
-          <Link to="/"> GamersKart </Link>
-        </h4>
-        <div className="nav-list flex ">
-          <Link to="/" className="home-link">
-            Home
-          </Link>
-          <Link to="/products" className="products-link">
-            Products
-          </Link>
+        <div className=" nav-left-wrapper flex">
+          <p className="hamberger-icon hide-content">
+            <i className="material-icons-outlined">menu</i>
+          </p>
+          <h4 className="logo brand-name">
+            <Link to="/"> GamersKart </Link>
+          </h4>
         </div>
-
         <div className="navigation-right-icons ">
-          <div className="search-filter">
-            <span className="icon-search">
-              <i className="fas fa-search"></i>
-            </span>
-            <input
-              className="search-space"
-              type="search"
-              placeholder="What are you looking for ?"
-            />
-          </div>
           <div className="nav-right-icons-container">
             <div className="badge-container">
               <span className="nav-icons">
