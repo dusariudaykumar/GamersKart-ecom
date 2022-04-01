@@ -2,8 +2,10 @@ import React from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 import { useCart } from "../../contexts/cart-context";
+import { useWishlist } from "../../contexts/wishlist-context";
 const NavBar = () => {
   const { cartItems } = useCart();
+  const { wishlistItems } = useWishlist();
   return (
     <div>
       <nav className="navigation-bar nav-container flex">
@@ -36,12 +38,12 @@ const NavBar = () => {
           <div className="nav-right-icons-container">
             <div className="badge-container">
               <span className="nav-icons">
-                <Link to="/" className="nav-wishlist-icon">
+                <Link to="/wishlist" className="nav-wishlist-icon">
                   <i className="material-icons-outlined"> favorite_border </i>
                 </Link>
               </span>
               <span className="wishlist-badge icon-badge-count bell-icon">
-                0
+                {wishlistItems.length}
               </span>
             </div>
 
