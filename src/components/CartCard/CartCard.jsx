@@ -1,7 +1,13 @@
 import React from "react";
-import { toast } from "react-toastify";
+import { useWishlist } from "../../contexts/wishlist-context";
+
 import "./CartCard.css";
-const CartCard = ({ cartItem, removeHandler, quantityHandler }) => {
+const CartCard = ({
+  cartItem,
+  removeHandler,
+  quantityHandler,
+  addToWishlistHandler,
+}) => {
   const { _id, coverImg, discountPercent, title, sellingPrice, originalPrice } =
     cartItem;
 
@@ -52,7 +58,9 @@ const CartCard = ({ cartItem, removeHandler, quantityHandler }) => {
               <i className="material-icons-outlined"> shopping_cart </i>
               Remove From cart
             </button>
-            <button className="cart-wishlist-btn wishlist-color">
+            <button
+              className="cart-wishlist-btn wishlist-color "
+              onClick={() => addToWishlistHandler(cartItem)}>
               <i className="material-icons-outlined"> favorite_border </i>
               Move To Wishlist
             </button>
