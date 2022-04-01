@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ProductCard, FilterComponent } from "../../components/index";
 import { useCart } from "../../contexts/cart-context";
 import { useFilter } from "../../contexts/filter-context";
+import { useWishlist } from "../../contexts/wishlist-context";
 import {
   getCategoryproducts,
   getPriceRangeProducts,
@@ -13,6 +14,7 @@ import "./products.css";
 
 const Products = () => {
   const { setCartItems } = useCart();
+  const { setWishlistItems } = useWishlist();
   const navigate = useNavigate();
   const encodedToken = localStorage.getItem("token");
 
@@ -40,6 +42,25 @@ const Products = () => {
       navigate("/login");
     }
   };
+  const addToWishlistHandler = async (product) => {
+    try {
+      const response = await axios.post(
+        "/api/user/wishlist",
+        { product },
+        {
+          headers: {
+            authorization: encodedToken,
+          },
+        }
+      );
+      const { wishlist } = response.data;
+      setWishlistItems(wishlist);
+      console.log(wishlist);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const items = data;
   const categoryData = getCategoryproducts(items, state);
   const ratedProductsData = getRatedProducts(categoryData, state);
@@ -54,6 +75,7 @@ const Products = () => {
           <ProductCard
             key={product.id}
             product={product}
+            addToWishlistHandler={() => addToWishlistHandler(product)}
             addToCartHandler={() => addToCartHandler(product)}
           />
         ))}
