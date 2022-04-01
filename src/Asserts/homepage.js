@@ -1,7 +1,7 @@
 export const images = {
   homepage: {
     bannerIMG:
-      "https://raw.githubusercontent.com/dusariudaykumar/GamersKart/Dev/Asserts/Banners/PS5_GAME_DEMONS_AND_SACKBOY_.jpg",
+      "https://cdn.shopify.com/s/files/1/2141/8475/collections/PS5_acc_banner_retouch_1800w_x_400h_1944x.png?v=1614143090",
     consolesIMG:
       "https://github.com/dusariudaykumar/GamersKart/blob/Dev/Asserts/Consoles/PS5_CONSOLE_DIGITAL.jpg?raw=true",
     diskConsoleIMG:

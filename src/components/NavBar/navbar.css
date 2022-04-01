@@ -2,9 +2,16 @@
   border-radius: 0;
   border: 0;
   height: 10vh;
+  background-color: var(--white);
+  position: fixed;
+  top: 0;
+  z-index: 99;
 }
 .hide-content {
   display: none;
+}
+.nav-left-wrapper {
+  align-items: center;
 }
 .nav-list {
   gap: 0.5rem;
@@ -31,6 +38,8 @@
   outline: none;
   border: none;
   font-size: 1.2rem;
+  background-color: inherit;
+  color: var(--white);
 }
 
 .nav-icons i {
