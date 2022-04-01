@@ -44,18 +44,22 @@ const WishList = () => {
 
   return (
     <div className="flex wishlist-wrapper">
-      {wishlistItems.map((product) => {
-        return (
-          <WishListCard
-            key={product._id}
-            product={product}
-            removeFromWishlistHandler={() =>
-              removeFromWishlistHandler(product._id)
-            }
-            moveToCartHandler={() => moveToCartHandler(product)}
-          />
-        );
-      })}
+      {wishlistItems.length > 1 ? (
+        wishlistItems.map((product) => {
+          return (
+            <WishListCard
+              key={product._id}
+              product={product}
+              removeFromWishlistHandler={() =>
+                removeFromWishlistHandler(product._id)
+              }
+              moveToCartHandler={() => moveToCartHandler(product)}
+            />
+          );
+        })
+      ) : (
+        <h2>Your Wishlist Is Empty 😫!</h2>
+      )}
     </div>
   );
 };

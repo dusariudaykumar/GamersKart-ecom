@@ -75,7 +75,7 @@ const Cart = () => {
           />
         ))}
       </div>
-      {cartItems.length > 0 ? <PriceCard /> : <h4>Cart is Empty 🙁</h4>}
+      {cartItems.length > 0 ? <PriceCard /> : <h2>Your Cart Is Empty 😫 ! </h2>}
       <ToastContainer autoClose={1000} />
     </div>
   );
