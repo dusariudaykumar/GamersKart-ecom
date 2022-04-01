@@ -51,3 +51,6 @@
 .rating-badge {
   max-width: fit-content;
 }
+.favorite {
+  color: var(--card-icon-color);
+}
