@@ -1,15 +1,17 @@
 import React from "react";
-import axiox from "axios";
+import axios from "axios";
 import { CartCard, PriceCard } from "../../components";
 import { useCart } from "../../contexts/cart-context";
 import "./Cart.css";
 import { toast, ToastContainer } from "react-toastify";
+import { useWishlist } from "../../contexts/wishlist-context";
 const Cart = () => {
   const { setCartItems, cartItems } = useCart();
+  const { setWishlistItems } = useWishlist();
   const encodedToken = localStorage.getItem("token");
   const removeHandler = async (productId) => {
     try {
-      const response = await axiox.delete(`api/user/cart/${productId}`, {
+      const response = await axios.delete(`api/user/cart/${productId}`, {
         headers: {
           authorization: encodedToken,
         },
@@ -23,7 +25,7 @@ const Cart = () => {
   };
   const quantityHandler = async (productId, type) => {
     try {
-      const response = await axiox.post(
+      const response = await axios.post(
         `/api/user/cart/${productId}`,
         {
           action: {
@@ -41,6 +43,24 @@ const Cart = () => {
       console.log(error);
     }
   };
+  const addToWishlistHandler = async (product) => {
+    try {
+      const response = await axios.post(
+        "/api/user/wishlist",
+        { product },
+        {
+          headers: {
+            authorization: encodedToken,
+          },
+        }
+      );
+      const { wishlist } = response.data;
+      setWishlistItems(wishlist);
+      removeHandler(product._id);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="cart-products flex">
@@ -51,6 +71,7 @@ const Cart = () => {
             cartItem={cartItem}
             removeHandler={removeHandler}
             quantityHandler={quantityHandler}
+            addToWishlistHandler={addToWishlistHandler}
           />
         ))}
       </div>
