@@ -1,10 +1,12 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 import { useAuth } from "../../contexts/auth-context";
 import "./SignUp.css";
 const SignUp = () => {
-  const { authState, setAuthState } = useAuth();
+  const navigate = useNavigate();
+  const { setAuthState } = useAuth();
   const initailSingUpData = {
     firstName: "",
     lastName: "",
@@ -23,7 +25,7 @@ const SignUp = () => {
   const { firstName, lastName, email, password, confirmPassword } = signUpData;
   const formDataClickHandler = async (e) => {
     e.preventDefault();
-    console.log({ ...signUpData });
+
     try {
       const authSignUpResponse = await axios.post("/api/auth/signup", {
         email,
@@ -37,16 +39,19 @@ const SignUp = () => {
         encodedToken: encodedToken,
         userData: createdUser,
       });
-
+      toast.success("Sucessfully Created Account  plaese wait..");
+      setTimeout(() => {
+        navigate("/");
+      }, 3000);
       localStorage.setItem("token", encodedToken);
       localStorage.setItem("createdUser", JSON.stringify(createdUser));
-      console.log(authSignUpResponse);
+
       setSignUpData(initailSingUpData);
     } catch (error) {
       console.log(error);
     }
   };
-  console.log(authState);
+
   return (
     <div className="sign-wrapper ">
       <form className="flex-col form-container" onSubmit={formDataClickHandler}>
@@ -93,7 +98,7 @@ const SignUp = () => {
               onChange={formDataChangeHandler}
               name="email"
               value={email}
-              placeholder="Enter your Last Name"
+              placeholder="Enter your Email Address"
               required
             />
           </div>
