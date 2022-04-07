@@ -1,38 +1,49 @@
 <h1 align="center"> GamersKart</h1>
 
-GamersKart is an online E-commerce Store for gaming related accessories.
+<p align="center">GamersKart is an online E-commerce Store for gaming related accessories.</p>
+
+
 ## Live link
   https://gamers-kart.netlify.app/
 
 
 ## Features 
-- Fully Responsives Pages
 - Home Page
-- Product Page
-- Login/SignUp Pages
-- Wishlist Page
-- Cart Page
+- Product Listing
+- Authentication
+- Wishlist Management
+- Cart Management
 
-## Run Locally
+## Getting Started
 
-Clone the project
+- Clone the project
 
 ```bash
  https://github.com/dusariudaykumar/GamersKart-ecom.git
 ```
 
-Go to the project directory
+- Go to the project directory
 
 ```bash
   cd GamersKart-ecom
 ```
+- Create a ``.env`` file at the root level of the directory
 
+```bash
+  REACT_APP_JWT_SECRET = <JWT_SECRET_KEY_OF_YOUR_CHOICE>
+```
 
+- Start the server
 
-## Tech Stack
+```bash
+  npm start
+```
 
-- Frontend : ReactJS
-- Backend : Mockbee  
+## Technologies used
+
+- ReactJS
+- [ReadyMade-UI](https://readymade-ui.netlify.app/)
+- Mockbee for backend
 
 **Hosted:** Netlify
 
