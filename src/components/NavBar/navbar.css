@@ -1,7 +1,7 @@
 .navigation-bar {
   border-radius: 0;
   border: 0;
-  height: 10vh;
+  height: max-content;
   background-color: var(--white);
 }
 .hide-content {
@@ -56,6 +56,17 @@
 .nav-icons i:hover,
 .nav-icons i:hover {
   opacity: 0.7;
+}
+.auth-btn {
+  border: none;
+  padding: 10px;
+  height: fit-content;
+  align-self: center;
+  margin-right: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: var(--secondary-bg-color);
+  color: var(--white);
 }
 @media only screen and (max-width: 650px) {
   .hide-content {

@@ -1,6 +1,7 @@
 .sign-wrapper {
   max-width: 25rem;
   margin: 4rem auto;
+  min-height: 70vh;
 }
 .form-wrapper {
   justify-content: center;

@@ -1,6 +1,7 @@
 /**** main **/
 .main-wrapper {
   grid-area: product;
+  min-height: 70vh;
 }
 .content-title {
   margin: 1rem;

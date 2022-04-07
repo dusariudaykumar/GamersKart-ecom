@@ -55,9 +55,9 @@ const Products = () => {
       );
       const { wishlist } = response.data;
       setWishlistItems(wishlist);
-      console.log(wishlist);
     } catch (error) {
-      console.log(error);
+      console.log(error.message);
+      navigate("/login");
     }
   };
 

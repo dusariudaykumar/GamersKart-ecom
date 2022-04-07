@@ -5,6 +5,7 @@
 .login-wrapper {
   max-width: 25rem;
   margin: 4rem auto;
+  min-height: 70vh;
 }
 .login-heading {
   text-align: center;

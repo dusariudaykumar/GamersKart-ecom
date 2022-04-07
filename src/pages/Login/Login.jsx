@@ -106,7 +106,6 @@ const Login = () => {
             Test Credentials
           </button>
         </div>
-        <ToastContainer autoClose={3000} />
         <Link className="sign-up flex" to="/signup">
           Don't have account ? Sign up!
           <span className="material-icons-outlined"> chevron_right </span>

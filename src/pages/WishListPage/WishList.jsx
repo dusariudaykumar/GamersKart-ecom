@@ -58,7 +58,7 @@ const WishList = () => {
           );
         })
       ) : (
-        <h2>Your Wishlist Is Empty 😫!</h2>
+        <h2 className="text-empty">Your Wishlist Is Empty 😫!</h2>
       )}
     </div>
   );

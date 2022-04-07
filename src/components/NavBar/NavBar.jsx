@@ -1,11 +1,21 @@
 import React from "react";
 import "./navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../../contexts/cart-context";
 import { useWishlist } from "../../contexts/wishlist-context";
+import { toast } from "react-toastify";
 const NavBar = () => {
+  const navigate = useNavigate();
   const { cartItems } = useCart();
   const { wishlistItems } = useWishlist();
+  const isLogin = localStorage.getItem("token") ? true : false;
+  const logoutHandler = () => {
+    localStorage.clear();
+    toast.success("Logout Done");
+    setTimeout(() => {
+      navigate(0);
+    }, 3000);
+  };
   return (
     <div>
       <nav className="navigation-bar nav-container flex">
@@ -39,11 +49,16 @@ const NavBar = () => {
               <span className="cart-badge icon-badge-count bell-icon">
                 {cartItems.length}
               </span>
+              {isLogin ? (
+                <button className="auth-btn" onClick={logoutHandler}>
+                  Logout
+                </button>
+              ) : (
+                <button className="auth-btn">
+                  <Link to="/login">Login</Link>
+                </button>
+              )}
             </div>
-
-            <Link to="/login" className="nav-person-icon">
-              <i className="material-icons"> person </i>
-            </Link>
           </div>
         </div>
       </nav>
